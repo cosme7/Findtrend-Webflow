@@ -175,7 +175,7 @@
     width: 100%;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: .3fr 3fr .3fr;
+    grid-template-columns: .3fr 4fr .3fr;
     grid-template-areas: 
     "... tabs ..."
     "... find ..."
@@ -189,7 +189,7 @@
 .tabs--container{
     grid-area: tabs / 3 span;    
     width: 100%;
-    padding: 5rem 1rem;
+    padding: 5rem 0.875rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -232,3 +232,48 @@
 }
 
 /** MAIN 2º CONTAINER */
+.find--txt{
+    grid-area: find;  
+    justify-self: center;
+    padding: 10% 0.875rem;
+    font-size: clamp(2.25rem, 4.2vw, 5.2rem);
+    font-family: var(--ff-txt);
+    font-weight: var(--wg-700);
+    background: var(--bg-two);
+    color: var(--clr-two); 
+}
+
+.find__span{
+    color: var(--clr-four);
+}
+
+/** MAIN 3º CONTAINER */
+.startup--container{
+    grid-area: startup / 3 span;  
+    width: 100%;
+    padding: 5% 0.875rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    background: var(--bg-two);
+}
+
+.startup__title{
+    font-size: clamp(2.25rem, 4.5vw, 5.5rem);
+    font-family: var(--ff-txt);
+    font-weight: var(--wg-700);
+    color: var(--clr-two); 
+}
+
+.startup--grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.startup__img{
+    width: 100%;
+}
+
+/** MAIN 4º CONTAINER */
