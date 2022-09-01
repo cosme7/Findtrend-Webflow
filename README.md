@@ -6,4 +6,4 @@
 
 <p>https://www.figma.com/file/Hmm1IE1te0rztxMiRzx1Yi/Findtrend-Webflow-(Free-Code)-(Community)?node-id=2%3A2</p>
 
-<p>- A ideia dessa vez, é uso pesado de CSS Grid, dá uma boa refinada nele.</p>
+<p>- A ideia dessa vez é uso pesado de CSS Grid, dá uma boa refinada nele.</p>

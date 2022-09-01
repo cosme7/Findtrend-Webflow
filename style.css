@@ -36,7 +36,7 @@
     background-size: 100% 100%;
     background-repeat: no-repeat;
     margin: 0 auto;
-    padding: 1.5rem 3rem 3rem;
+    padding: 1.5rem 3rem 5rem;
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-areas: 
@@ -157,7 +157,7 @@
 .htxt__img{
     position: relative;
     left: 10rem;
-    bottom: 4rem;
+    bottom: 4.5rem;
 }
 
 .h__social{
@@ -169,3 +169,66 @@
 .h--social--mobile{
     display: none;
 }
+
+/** MAIN START */
+.main--grid{
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: .3fr 3fr .3fr;
+    grid-template-areas: 
+    "... tabs ..."
+    "... find ..."
+    "... startup ..."
+    "... platform ..."
+    "... card ..."
+    "... join ...";
+}
+
+/** MAIN 1º CONTAINER */
+.tabs--container{
+    grid-area: tabs / 3 span;    
+    width: 100%;
+    padding: 5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    background: var(--bg-one);
+}
+
+.tabs__title{
+    font-size: clamp(2.25rem, 3.8vw, 5rem);
+    font-family: var(--ff-txt);
+    font-weight: var(--wg-700);
+    color: var(--clr-two);
+}
+
+.tabs__body{
+    width: min(65ch, 85%);
+    font-size: clamp(.875rem, 1vw, 1.5rem);
+    font-family: var(--ff-txt);
+    font-weight: var(--wg-400);
+    color: var(--clr-two);
+    text-align: center;
+}
+
+.tabs--wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.tabs__img{
+    width: 7%;
+}
+
+.tabs__border{
+    width: 25%;
+    border: 60px solid var(--bg-two);
+    border-radius: 16px;
+}
+
+/** MAIN 2º CONTAINER */
