@@ -16,7 +16,8 @@
     /*  */
     --wg-900: 900;
     --wg-700: 700;
-    --wg-400: light;
+    --wg-500: 500;
+    --wg-400: 400;
     /*  */
     --bg-one: #A8FF35;
     --bg-two: #FFFFFF;
@@ -28,6 +29,7 @@
     --clr-three: #8B8B8B;
     --clr-four: #ADADAD;
     --clr-five: #87D322;
+    --clr-six: #F5F5F5;
 }
 
 /** HEADER CONTAINER */
@@ -286,6 +288,7 @@
     flex-direction: column;
     align-items: center;
     gap: 5em;
+    background: var(--bg-four);
 }
 
 .platform__title{
@@ -293,7 +296,6 @@
     font-family: var(--ff-txt);
     font-weight: var(--wg-700);
     color: var(--clr-two); 
-    background: var(--bg-four);
 }
 
 .platform--wrapper{
@@ -330,3 +332,203 @@
 }
 
 /** MAIN 5º CONTAINER */
+.card--container{
+    grid-area: card / 3 span;
+    width: 100%;
+    padding: 8% 0.875rem 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    background: var(--bg-three);
+}
+
+.card__title{
+    font-size: clamp(2.25rem, 4vw, 5rem);
+    font-family: var(--ff-txt);
+    font-weight: var(--wg-700);
+    color: var(--clr-one); 
+}
+
+.card--switch{
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.card__body{
+    font-size: clamp(.875rem, 1.1vw, 1.5rem);
+    font-family: var(--ff-txt);
+    font-weight: var(--wg-500);
+    color: var(--clr-one);
+}
+
+.card__grey{
+    color: var(--clr-three);
+}
+
+.card__arrow{
+    width: 15%;
+}
+
+/** SWITCH */
+.switch__label{
+    position: relative;
+    width: 95px;
+    height: 44px;
+}
+
+.switch__checkbox{
+    display: none;
+}
+
+.switch__slider{
+    border-radius: 34px;
+    position: absolute;
+    inset: 0;
+    background: var(--bg-two);
+    transition: .4s;
+    cursor: pointer;
+}
+
+.switch__slider::before{
+    content: '';
+    width: 40px;
+    height: 35px;
+    border-radius: 50%;
+    background: var(--bg-one);
+    transition: .4s;
+    position: absolute;
+    left: 4px;
+    bottom: 4px;
+}
+
+.switch__checkbox:checked + .switch__slider{
+    background: var(--bg-four);
+}
+
+.switch__checkbox:checked + .switch__slider::before{
+    transform: translateX(45px);
+}
+
+.switch__checkbox:focus + .switch__slider{
+    box-shadow: 0 0 1px var(--bg-one);
+}
+/** SWITCH END */
+
+/** CARD */
+.card--grid{
+    width: 80%;
+    height: 640px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem;
+}
+
+.card__white{
+    width: 100%;
+
+    padding: 2rem 2rem 1.5rem;
+    border-radius: 16px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 20% 10% 30% 10%;
+    background: var(--bg-four);
+}
+
+.card__green{
+    background: var(--bg-one);
+}
+
+.title--wrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.title__card{
+    font-size: clamp(2rem, 2vw, 3rem);
+    font-family: var(--ff-txt);
+    font-weight: var(--wg-700);
+    line-height: 100%;
+    color: var(--clr-two); 
+}
+
+.card__sub{
+    font-size: clamp(1rem, 1vw, 2rem);
+    font-family: var(--ff-txt);
+    font-weight: var(--wg-400);
+    color: var(--clr-two); 
+}
+
+.price--wrapper{
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    gap: .5rem;
+    position: relative;
+}
+
+.price--wrapper::before{
+    content: '';
+    width: 100%;
+    border: 1px solid var(--bg-three);
+    opacity: 0.2;
+    position: absolute;
+    top: -2rem;
+}
+
+.card__price{
+    font-size: clamp(3.75rem, 3.5vw, 4.5rem);
+    font-family: var(--ff-txt);
+    font-weight: var(--wg-700);
+    line-height: 100%;
+    color: var(--clr-two); 
+}
+
+.card__mouth{
+    font-size: clamp(1rem, 1.1vw, 2rem);
+    font-weight: var(--wg-400);
+}
+
+.list--wrapper{
+    width: 100%;
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 5% 95%;
+    grid-auto-rows: 30%;
+    align-items: center;
+    column-gap: .5rem;
+}
+
+.card__list{
+    font-size: clamp(1.125rem, 1vw, 2rem);
+    font-family: var(--ff-txt);
+    font-weight: var(--wg-400);
+    color: var(--clr-two); 
+}
+
+.card__ok{
+    width: 100%;
+}
+
+.card__btn{
+    grid-area: 10 / 1;
+    width: 100%;
+    height: 3em;
+    border-radius: 40px;
+    font-size: clamp(0.875rem, 1vw, 1.5rem);
+    font-family: var(--ff-txt);
+    font-weight: var(--wg-700);
+    color: var(--clr-two);
+    background: var(--bg-one);
+    border: none;
+    cursor: pointer;
+}
+
+.green__btn{
+    color: var(--clr-one);
+    background: var(--bg-three);
+}
