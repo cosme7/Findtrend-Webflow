@@ -429,7 +429,6 @@
 
 .card__white{
     width: 100%;
-
     padding: 2rem 2rem 1.5rem;
     border-radius: 16px;
     display: grid;
@@ -531,4 +530,41 @@
 .green__btn{
     color: var(--clr-one);
     background: var(--bg-three);
+}
+
+/** MAIN 6º CONTAINER */
+.join--container{
+    grid-area: join / 3 span;
+    width: 100%;
+    padding: 7% 0.875rem 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--bg-one);
+}
+
+.join__top{
+    font-size: clamp(2.25rem, 4vw, 5rem);
+    font-family: var(--ff-txt);
+    font-weight: var(--wg-700);
+    line-height: 100%;
+    color: var(--clr-two); 
+}
+
+.join__bottom{
+    margin-bottom: 2rem;
+    color: var(--clr-five);
+}
+
+.join__btn{
+    width: 8em;
+    height: 2.5em;
+    border-radius: 40px;
+    font-size: clamp(0.875rem, 1vw, 1.5rem);
+    font-family: var(--ff-txt);
+    font-weight: var(--wg-700);
+    color: var(--clr-one);
+    background: var(--bg-three);
+    border: none;
+    cursor: pointer;
 }
